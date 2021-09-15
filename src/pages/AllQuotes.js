@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Quotes = () => {
+const AllQuotes = () => {
   return (
     <div>
       <h1>Quotes</h1>
@@ -8,4 +8,4 @@ const Quotes = () => {
   )
 }
 
-export default Quotes
+export default AllQuotes

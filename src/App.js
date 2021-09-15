@@ -1,6 +1,7 @@
 import { Route, Switch, NavLink } from 'react-router-dom'
-import Quotes from './pages/Quotes'
+import AllQuotes from './pages/AllQuotes'
 import NewQuote from './pages/NewQuote'
+import QuoteDetail from './pages/QuoteDetail';
 
 function App() {
   return (
@@ -17,12 +18,17 @@ function App() {
           
         </nav>
       </header>
-      <Route path="/new-quote">
-        <NewQuote />
-      </Route>
-      <Route path="/quotes">
-        <Quotes />
-      </Route>
+      <Switch> 
+        <Route path="/quotes" exact>
+          <AllQuotes />
+        </Route>
+        <Route path="/quotes/:quoteId">
+          <QuoteDetail />
+        </Route>
+        <Route path="/new-quote">
+          <NewQuote />
+        </Route>
+      </Switch>
     </div>
   );
 }
