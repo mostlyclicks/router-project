@@ -2,6 +2,7 @@ import { Route, Switch, NavLink, Redirect } from 'react-router-dom'
 import AllQuotes from './pages/AllQuotes'
 import NewQuote from './pages/NewQuote'
 import QuoteDetail from './pages/QuoteDetail';
+import Comments from './components/comments/Comments'
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/quotes/:quoteId">
           <QuoteDetail />
+          <Route path="/quotes/:quoteId/comments">
+            <Comments />
+          </Route>
         </Route>
         <Route path="/new-quote">
           <NewQuote />
