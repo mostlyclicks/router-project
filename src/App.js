@@ -1,4 +1,4 @@
-import { Route, Switch, NavLink } from 'react-router-dom'
+import { Route, Switch, NavLink, Redirect } from 'react-router-dom'
 import AllQuotes from './pages/AllQuotes'
 import NewQuote from './pages/NewQuote'
 import QuoteDetail from './pages/QuoteDetail';
@@ -18,7 +18,10 @@ function App() {
           
         </nav>
       </header>
-      <Switch> 
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/quotes" />
+        </Route>
         <Route path="/quotes" exact>
           <AllQuotes />
         </Route>
