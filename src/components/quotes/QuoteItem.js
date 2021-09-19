@@ -1,5 +1,5 @@
 import classes from './QuoteItem.module.css';
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const QuoteItem = (props) => {
 
